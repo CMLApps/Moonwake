@@ -25,27 +25,27 @@
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <p class="date">Last updated: 2026-06-01. Effective: 2026-07-01.</p>
+    <p class="date">Last updated: 2026-07-14. Effective: 2026-07-14.</p>
     <p class="lead">This is the Privacy Policy for Moonwake, an iOS application published by Cloud Motion Lab LLC ("we", "our", "us"). It explains what we collect, why, who we share it with, how long we keep it, and the rights you have. We try to keep this readable. If a section is unclear, write to <a href="mailto:dev@slyapp.co">dev@slyapp.co</a>.</p>
 
     <h2>Notice at Collection (California)</h2>
-    <p>We collect the following categories of personal information when you use Moonwake: identifiers (Apple-issued anonymous user IDs), commercial information (purchase history within the app), internet or other electronic network activity (in-app usage signals), and any inputs you voluntarily provide to in-app features, such as the question you ask for a reading. We use this information to deliver the app, generate the readings you request, process purchases through Apple, prevent fraud and abuse, and improve features. Retention is described in the Retention section below. <strong>We do not sell your personal information and we do not share it for cross-context behavioral advertising.</strong> A summary of your California privacy rights and the link to exercise them appear in the State Privacy Rights section below.</p>
+    <p>We collect the following categories of personal information when you use Moonwake: identifiers (Apple-issued anonymous user IDs), commercial information (purchase history within the app), internet or other electronic network activity (in-app usage signals), and any inputs you voluntarily provide to in-app features, such as the question you ask for a reading or a dream you ask to have read. We use this information to deliver the app, generate the readings you request, process purchases through Apple, prevent fraud and abuse, and improve features. Retention is described in the Retention section below. <strong>We do not sell your personal information and we do not share it for cross-context behavioral advertising.</strong> A summary of your California privacy rights and the link to exercise them appear in the State Privacy Rights section below.</p>
 
     <h2>What We Collect</h2>
     <p>Moonwake is built to collect as little as possible. There are no user accounts, no logins, and no profile pages.</p>
     <ul>
         <li><strong>Anonymous usage analytics</strong> via TelemetryDeck. Examples: when a screen opens, when a paywall appears, when a reading is requested. No IP address, no IDFA, no advertising identifier, no persistent identifier tied to you.</li>
         <li><strong>Subscription state</strong> via RevenueCat. We receive an anonymous identifier from Apple that tells the app whether your subscription is active. We never receive your credit card, billing address, Apple ID, or email.</li>
-        <li><strong>Reading inputs</strong>: when you request a tarot reading, the question you type is sent to a third-party AI model provider that generates the reading text. The question is transmitted for the sole purpose of producing your reading. We do not attach your name or any account identifier to it, because Moonwake has no account system.</li>
+        <li><strong>Reading inputs</strong>: when you request a tarot reading, the question you type is sent to a third-party AI model provider that generates the reading text. When you request a dream reading, the text of that dream telling, together with the symbols the app found in it, is sent the same way. In both cases the input is transmitted for the sole purpose of producing the reading you asked for, and only when you ask for one. We do not attach your name or any account identifier to it, because Moonwake has no account system.</li>
         <li><strong>Local-only data</strong> stored on your device: your reading history, drawn cards, and app preferences using Apple's SwiftData and UserDefaults frameworks. None of this is synced to a server we operate. Deleting the app deletes this data.</li>
     </ul>
 
     <h2>AI Readings and the AI Subprocessor</h2>
-    <p>Moonwake generates readings by sending the question you type, together with a fixed instruction prompt, to a third-party AI model provider. The provider returns generated text, which the app displays as your reading and stores locally on your device. We do not use your questions or readings to train any model of our own, and we do not maintain a server-side copy of your reading history. The AI provider's handling of the data we transmit is governed by its own terms and privacy policy, and its retention of the data we send is summarized in the Subprocessors table below.</p>
+    <p>Moonwake generates readings by sending the input you provide, together with a fixed instruction prompt, to a third-party AI model provider. For a tarot reading, that input is the question you type. For a dream reading, it is the text of the dream telling you ask to have read, together with the symbols the app found in it. The provider returns generated text, which the app displays as your reading and stores locally on your device. A dream reading happens only when you explicitly request one; keeping a dream in your journal never sends it anywhere. We do not use your questions, dreams, or readings to train any model of our own, and we do not maintain a server-side copy of your reading history or your dream journal. The AI provider's handling of the data we transmit is governed by its own terms and privacy policy, and its retention of the data we send is summarized in the Subprocessors table below.</p>
     <table>
         <thead><tr><th>AI subprocessor</th><th>Purpose</th><th>Region</th><th>What is sent</th></tr></thead>
         <tbody>
-            <tr><td>OpenRouter (and the underlying model provider it routes to)</td><td>Generate the text of a tarot reading from your question</td><td>United States</td><td>Your typed question and a fixed instruction prompt; no name, email, or account identifier</td></tr>
+            <tr><td>OpenRouter (and the underlying model provider it routes to)</td><td>Generate the text of a tarot reading from your question, or of a dream reading from a dream you ask to have read</td><td>United States</td><td>Your typed question, or the dream telling you asked to have read and the symbols found in it, plus a fixed instruction prompt; no name, email, or account identifier</td></tr>
         </tbody>
     </table>
 
@@ -55,7 +55,7 @@
         <tbody>
             <tr><td>Anonymous usage analytics</td><td>Operate and improve the app</td><td>Legitimate interest, Art. 6(1)(f)</td></tr>
             <tr><td>Subscription state</td><td>Deliver paid features you bought</td><td>Performance of contract, Art. 6(1)(b)</td></tr>
-            <tr><td>AI reading inputs (your question)</td><td>Generate the reading you requested</td><td>Performance of contract, Art. 6(1)(b)</td></tr>
+            <tr><td>AI reading inputs (your question, or a dream you ask to have read)</td><td>Generate the reading you requested</td><td>Performance of contract, Art. 6(1)(b)</td></tr>
             <tr><td>Fraud, abuse, and security monitoring</td><td>Protect users and the service</td><td>Legitimate interest, Art. 6(1)(f); legal obligation, Art. 6(1)(c)</td></tr>
         </tbody>
     </table>
@@ -123,9 +123,9 @@
         <li><strong>Saving a card asks for add-only permission.</strong> That lets the app write one image into your library. It does not let the app read it.</li>
         <li>Your photo stays on your device. It is never uploaded.</li>
     </ul>
-    <h3>Your dreams stay on your phone</h3>
+    <h3>Your dream journal lives on your phone</h3>
     <p>
-        Dream transcripts and everything in your dream journal are stored in a file on your device. They are not uploaded, not synced to any cloud, not backed up to our servers, and never sent to the AI model. If you delete the app, they are gone.
+        Dream transcripts and everything in your dream journal are stored in a file on your device. As journal data they are not uploaded, not synced to any cloud, and not backed up to our servers. If you delete the app, they are gone. One exception, and it only happens when you ask for it: if you request a dream reading, the text of that dream telling is sent to the AI subprocessor listed above to generate the reading, exactly like a tarot question. Your voice audio is never sent or stored in any case, and a dream you never ask to have read never leaves your phone.
     </p>
     <p></p>
 
